@@ -66,7 +66,7 @@ public class Register extends AppCompatActivity {
             name.setError(null);
         }
         if(mobile.isEmpty() || mobile.length() < 10 || !mobile.matches("[0-9]{10}")) {
-            phn.setError("enter at least 3 characters");
+            phn.setError("enter a valid mobile number");
             valid = false;
         } else {
             phn.setError(null);
