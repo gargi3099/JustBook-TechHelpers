@@ -37,7 +37,7 @@ public class Register extends AppCompatActivity {
                 if(validate()) {
                     Toast.makeText(getBaseContext(), "Signup Successful", Toast.LENGTH_LONG).show();
                     button.setEnabled(true);
-                    Intent intent = new Intent(Register.this, Login.class);
+                    Intent intent = new Intent(Register.this, com.example.application2.Login.class);
                     startActivity(intent);
                 }
                 else{
@@ -60,39 +60,39 @@ public class Register extends AppCompatActivity {
         String mobile = phn.getText().toString();
 
         if (n.isEmpty() || n.length() < 3) {
-            name.setError("enter at least 3 characters");
+            name.setError("Enter at least 3 characters");
             valid = false;
         } else {
             name.setError(null);
         }
         if(mobile.isEmpty() || mobile.length() < 10 || !mobile.matches("[0-9]{10}")) {
-            phn.setError("enter a valid mobile number");
+            phn.setError("Enter a valid mobile number");
             valid = false;
         } else {
             phn.setError(null);
         }
         if (u.isEmpty() || u.length() < 3) {
-            un.setError("enter at least 3 characters");
+            un.setError("Enter at least 3 characters");
             valid = false;
         } else {
             un.setError(null);
         }
 
         if (a.isEmpty() ) {
-            add.setError("fill address field");
+            add.setError("Address field required");
             valid = false;
         } else {
             add.setError(null);
         }
         if (e.isEmpty() || !android.util.Patterns.EMAIL_ADDRESS.matcher(e).matches()) {
-            email.setError("enter a valid email address");
+            email.setError("Enter a valid email address");
             valid = false;
         } else {
             email.setError(null);
         }
 
         if (p.isEmpty() || p.length() < 4 || p.length() > 10) {
-            pwd.setError("range 4-10 alphanumeric characters");
+            pwd.setError("Range 4-10 alphanumeric characters");
             valid = false;
         }else {
             pwd.setError(null);
@@ -102,7 +102,7 @@ public class Register extends AppCompatActivity {
             cpwd.setError(null);
             psisequal = true;
         }else {
-            cpwd.setError("passwords do not match");
+            cpwd.setError("Passwords do not match");
             valid = false;
             psisequal = false;
         }

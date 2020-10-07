@@ -26,7 +26,7 @@ public class Login extends AppCompatActivity {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(Login.this,Register.class);
+                Intent intent=new Intent(Login.this, com.example.application2.Register.class);
                 startActivity(intent);
             }
         });
@@ -37,11 +37,11 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                   if(username.getText().toString().equals("admin") && password.getText().toString().equals("123")) {
-                      Intent intent = new Intent(Login.this, Home.class);
+                      Intent intent = new Intent(Login.this, com.example.application2.Home.class);
                       startActivity(intent);
                   }
                   else{
-                      password.setError("incorrect username or password");
+                      password.setError("Incorrect username or password");
                   }
             }
         });
