@@ -27,4 +27,8 @@
     <string name="menu_home">Home</string>
     <string name="menu_bookings">Previous Bookings</string>
     <string name="menu_settings">Settings</string>
+    <string name="menu_myprofile">My profile</string>
+    <string name="title_activity_myprofile">Myprofile</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
 </resources>
