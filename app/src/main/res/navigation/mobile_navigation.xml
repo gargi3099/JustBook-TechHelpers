@@ -23,5 +23,4 @@
         android:label="@string/menu_settings"
         tools:layout="@layout/fragment_slideshow" />
 
-
 </navigation>

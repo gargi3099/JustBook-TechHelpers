@@ -18,7 +18,9 @@ public class Settings extends AppCompatActivity {
         else setTheme(R.style.AppTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         switchdark=(Switch)findViewById(R.id.switchdark);
         if(AppCompatDelegate.getDefaultNightMode()==AppCompatDelegate.MODE_NIGHT_YES)
         {

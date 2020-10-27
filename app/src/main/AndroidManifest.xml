@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+
             android:name="com.example.application2.Myprofile"
             android:label="@string/title_activity_myprofile"
             android:parentActivityName=".Home"
@@ -22,6 +23,7 @@
         <activity
             android:name=".Settings"
             android:parentActivityName=".Home" />
+
         <activity android:name=".Register" />
         <activity android:name=".Login" />
         <activity android:name=".MainActivity">

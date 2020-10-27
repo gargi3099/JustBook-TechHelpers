@@ -36,4 +36,24 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.775" />
+
+
+    <TextView
+        android:id="@+id/tvlogo"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="25dp"
+        android:paddingTop="20dp"
+        android:text="One stop shop for home repairs."
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.759" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
