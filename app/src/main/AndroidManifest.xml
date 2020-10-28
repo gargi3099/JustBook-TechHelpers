@@ -9,24 +9,36 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name="com.example.application2.Feedback"></activity>
+        <activity android:name="com.example.application2.Thanks" />
+        <activity android:name="com.example.application2.Booked" />
+        <activity android:name="com.example.application2.Confirm" />
+        <activity android:name="com.example.application2.Details" />
+        <activity android:name="com.example.application2.Mechanic" />
         <activity
-
-            android:name="com.example.application2.Myprofile"
+            android:name=".Myprofile"
+            android:configChanges="uiMode"
             android:label="@string/title_activity_myprofile"
             android:parentActivityName=".Home"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Home"
+            android:configChanges="uiMode"
             android:label="@string/title_activity_home"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Settings"
+            android:configChanges="uiMode"
             android:parentActivityName=".Home" />
-
-        <activity android:name=".Register" />
-        <activity android:name=".Login" />
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".Register"
+            android:configChanges="uiMode" />
+        <activity
+            android:name=".Login"
+            android:configChanges="uiMode" />
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="uiMode">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
