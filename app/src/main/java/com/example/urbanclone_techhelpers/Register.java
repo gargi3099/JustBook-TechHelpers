@@ -1,5 +1,6 @@
 package com.example.application2;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -11,10 +12,19 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class Register extends AppCompatActivity {
     Button button;
     EditText name,phn,email,pwd,cpwd,un,add;
-
+    FirebaseAuth fAuth;
+    DatabaseReference ref;
+    com.example.application2.UserData member;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,15 +40,53 @@ public class Register extends AppCompatActivity {
         pwd = (EditText)findViewById(R.id.etPwd);
         cpwd = (EditText)findViewById(R.id.etConfirmPwd);
         un = (EditText)findViewById(R.id.etun);
-
+        fAuth = FirebaseAuth.getInstance();
+        if(fAuth.getCurrentUser()!=null)
+        {
+            Intent intent = new Intent(Register.this, com.example.application2.Home.class);
+            startActivity(intent);
+            finish();
+        }
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String e = email.getText().toString();
+                String p = pwd.getText().toString();
+                final String n = name.getText().toString();
+                final String address = add.getText().toString();
+                final String username = un.getText().toString();
+                final String mobile = phn.getText().toString();
+                member = new com.example.application2.UserData();
+                ref = FirebaseDatabase.getInstance().getReference().child("User Data");
                 if(validate()) {
-                    Toast.makeText(getBaseContext(), "Signup Successful", Toast.LENGTH_LONG).show();
-                    button.setEnabled(true);
-                    Intent intent = new Intent(Register.this, com.example.application2.Login.class);
-                    startActivity(intent);
+                    fAuth.createUserWithEmailAndPassword(e,p).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if(task.isSuccessful()){
+                                member.setName(n);
+                                member.setPhone(mobile);
+                                member.setUsername(username);
+                                member.setAddress(address);
+                                ref.push().setValue(member)
+                                        .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                            @Override
+                                            public void onComplete(@NonNull Task<Void> task) {
+                                                if(task.isSuccessful())
+                                                {
+                                                    Toast.makeText(getBaseContext(), "Signup Successful", Toast.LENGTH_LONG).show();
+                                                    button.setEnabled(true);
+                                                    Intent intent = new Intent(Register.this, com.example.application2.Login.class);
+                                                    startActivity(intent);
+                                                }
+                                            }
+                                        });
+                            }
+                            else{
+                                Toast.makeText(getBaseContext(), "Signup Failed", Toast.LENGTH_LONG).show();
+                                button.setEnabled(true);
+                            }
+                        }
+                    });
                 }
                 else{
                     Toast.makeText(getBaseContext(), "Signup Failed", Toast.LENGTH_LONG).show();
