@@ -18,8 +18,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class Login extends AppCompatActivity {
-    Button button1,button2;
-    EditText username,password;
+    private Button button1,button2;
+    private EditText username,password;
     FirebaseAuth fAuth;
     private int counter=5;
 
@@ -51,7 +51,7 @@ public class Login extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String email= username.getText().toString();
+                final String email= username.getText().toString();
                 String pswd= password.getText().toString();
                 fAuth.signInWithEmailAndPassword(email,pswd).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override

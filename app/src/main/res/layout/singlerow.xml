@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="10dp"
+        android:id="@+id/cv1"
+        android:layout_margin="10dp"
+        app:cardBackgroundColor="#ffffff"
+        >
+
+        <LinearLayout
+            android:id="@+id/ll1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="120dp"
+                android:layout_height="150dp"
+                android:id="@+id/ivm"
+                android:layout_margin="10dp"
+                android:src="@drawable/tech"
+                app:civ_border_width="2dp"
+                app:civ_border_color="#FF000000"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:id="@+id/ll2"
+                >
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tmname"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center"
+                    android:textSize="16sp"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:drawableLeft="@drawable/ic_baseline_account_box_24"
+                    android:drawablePadding="5dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tmaddr"
+                    android:textSize="16sp"
+                    android:textColor="#000000"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:drawableLeft="@drawable/ic_baseline_home_24"
+                    android:drawablePadding="5dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tmemail"
+                    android:textSize="16sp"
+                    android:textColor="#000000"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:drawableLeft="@android:drawable/sym_action_email"
+                    android:drawablePadding="5dp"
+                    />
+                <RatingBar
+                    android:id="@+id/rb"
+                    android:numStars="5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:isIndicator="true"
+                    android:rating="5"
+                    />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,192 +4,173 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fcce2f"
-    tools:context="com.example.urbanclone_techhelpers.Details">
+    android:background="#FAF7F6"
+    tools:context="com.example.urbanclone_techhelpers.Details"
+    >
 
-    <ImageView
-        android:id="@+id/imglogo"
-        android:layout_width="99dp"
-        android:layout_height="97dp"
-        android:background="#000000"
-        android:padding="2dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.159"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.074"
-        tools:srcCompat="@drawable/logoicon" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="385dp"
+        android:id="@+id/cv1"
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="164dp"
-        android:layout_height="29dp"
-        android:text="Name:     Tech-helper"
-        android:textColor="#000000"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.821"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.447" />
+        android:background="@drawable/techde"
+        tools:ignore="MissingConstraints">
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="175dp"
-        android:layout_height="wrap_content"
-        android:text="Phone:     7976342562"
-        android:textColor="#000000"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView6"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.211"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.976" />
+        <LinearLayout
+            android:id="@+id/ll1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="286dp"
-        android:layout_height="wrap_content"
-        android:text="Address:     Ganesh chatarawas,near thokar chauraha,Udaipur"
-        android:textColor="#000000"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView7"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="120dp"
+                android:layout_height="150dp"
+                android:id="@+id/imglogo"
+                android:layout_margin="10dp"
+                android:src="@drawable/tech"
+                app:civ_border_width="2dp"
+                app:civ_border_color="#FF000000"
+                />
 
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="175dp"
-        android:layout_height="wrap_content"
-        android:text="Username:     admin"
-        android:textColor="#000000"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView8"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.211"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:id="@+id/ll2"
+                >
 
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:text="Email:     techhelpers@gmail.com"
-        android:textColor="#000000"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.31"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.419" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tname"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center"
+                    android:textSize="20sp"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:drawableLeft="@drawable/ic_baseline_account_box_24"
+                    android:drawablePadding="5dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tphn"
+                    android:textSize="20sp"
+                    android:textColor="#000000"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:drawableLeft="@android:drawable/ic_menu_call"
+                    android:drawablePadding="5dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/taddr"
+                    android:textSize="20sp"
+                    android:textColor="#000000"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:drawableLeft="@drawable/ic_baseline_home_24"
+                    android:drawablePadding="5dp"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/temail"
+                    android:textSize="20sp"
+                    android:textColor="#000000"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:drawableLeft="@android:drawable/sym_action_email"
+                    android:drawablePadding="5dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tus"
+                    android:textSize="20sp"
+                    android:textColor="#000000"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:drawableLeft="@drawable/ic_baseline_account_box_24"
+                    android:drawablePadding="5dp"
+                    />
+
+                <RatingBar
+                    android:id="@+id/rb"
+                    android:numStars="5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:isIndicator="true"
+                    android:rating="5"
+                    />
+                <Button
+                    android:id="@+id/tbtn"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="#0E0E0E"
+                    android:onClick="Confirm"
+                    android:text="Book Now"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.498"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="parent"></Button>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
 
     <Button
-        android:layout_width="150dp"
+        android:id="@+id/tfb"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#2E96C5"
-        android:text="Book Now"
-        android:textColor="#000000"
-        android:textSize="16dp"
-        android:onClick="Confirm"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></Button>
-
-    <TextView
-        android:id="@+id/textView_Feedback"
-        android:layout_width="110dp"
-        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
         android:text="FEEDBACKS"
-        android:textColor="#F44336"
+        android:textColor="#FFFFFF"
         android:textSize="20dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.621" />
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card_view"
-        android:layout_width="325dp"
-        android:layout_height="77dp"
-        android:layout_gravity="center"
-        app:cardBackgroundColor="#C5B0A9"
-        app:cardCornerRadius="4dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="#191919"
+        app:layout_constraintBottom_toTopOf="@+id/rv2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.764">
+        app:layout_constraintTop_toBottomOf="@+id/cv1"
 
+        android:onClick="visible"
+        />
 
-        <TextView
-            android:id="@+id/text_name"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="15dp"
-            android:text="Very good service, polite and hardworking nature."
-            android:textColor="#000000"
-            android:textSize="16dp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/text_rate"
-            android:layout_width="71dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="245dp"
-            android:layout_marginTop="25dp"
-            android:gravity="right"
-            android:text="5"
-            android:textColor="#000000"
-            android:textSize="16dp" />
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card_view2"
-        android:layout_width="325dp"
-        android:layout_height="77dp"
-        android:layout_gravity="center"
-        app:cardBackgroundColor="#C5B0A9"
-        app:cardCornerRadius="4dp"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv2"
+        android:layout_width="407dp"
+        android:layout_height="170dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        android:layout_marginTop="1dp"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@+id/tfb"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.935">
+        app:layout_constraintStart_toStartOf="parent" />
 
-
-        <TextView
-            android:id="@+id/text_name2"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="15dp"
-            android:text="Good service, but not so polite nature."
-            android:textColor="#000000"
-            android:textSize="16dp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/text_rate2"
-            android:layout_width="71dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="245dp"
-            android:layout_marginTop="25dp"
-            android:gravity="right"
-            android:text="3"
-            android:textColor="#000000"
-            android:textSize="16dp" />
-    </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

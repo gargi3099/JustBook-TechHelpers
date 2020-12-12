@@ -50,7 +50,7 @@ public class Register extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String e = email.getText().toString();
+                final String e = email.getText().toString();
                 String p = pwd.getText().toString();
                 final String n = name.getText().toString();
                 final String address = add.getText().toString();
@@ -67,6 +67,7 @@ public class Register extends AppCompatActivity {
                                 member.setPhone(mobile);
                                 member.setUsername(username);
                                 member.setAddress(address);
+                                member.setEmail(e);
                                 ref.push().setValue(member)
                                         .addOnCompleteListener(new OnCompleteListener<Void>() {
                                             @Override

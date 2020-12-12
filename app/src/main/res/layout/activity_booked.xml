@@ -7,70 +7,80 @@
     android:background="#fcce2f"
     tools:context="com.example.application2.Booked">
 
-    <TextView
-        android:id="@+id/textView4"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="BOOKING CONFIRMED!"
-        android:textColor="#255C27"
-        android:textSize="25dp"
-        android:textAlignment="center"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.447" />
+        android:id="@+id/l1"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:background="@drawable/details"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/bc4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="BOOKING CONFIRMED!"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+             />
 
 
-    <TextView
-        android:id="@+id/textView_date"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="100dp"
-        android:text="Date - 30 October 2020"
-        android:textColor="#000000"
-        android:textSize="30dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.447" />
+        <TextView
+            android:id="@+id/tvbdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="10dp"
+            android:text="Date: 30 October 2020"
+            android:textColor="#F4EFEF"
+            android:drawableLeft="@android:drawable/ic_dialog_dialer"
+            android:drawablePadding="5dp"
+            android:paddingLeft="5dp"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+             />
 
-    <TextView
-        android:id="@+id/textView_time"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="168dp"
-        android:text="Time - 12:00 PM"
-        android:textColor="#000000"
-        android:textSize="30dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.447" />
+        <TextView
+            android:id="@+id/textView_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:text="Time: 12:00 PM"
+            android:drawableLeft="@android:drawable/ic_popup_reminder"
+            android:drawablePadding="5dp"
+            android:paddingLeft="5dp"
+            android:textColor="#F4EEEE"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent"
+             />
+    </LinearLayout>
 
     <Button
         android:layout_width="186dp"
         android:layout_height="81dp"
-        android:background="#4CAF50"
+        android:background="@drawable/mybutton"
         android:onClick="Thanks"
         android:text="OK"
-        android:textColor="#000000"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="35dp"
         android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.881"></Button>
 </androidx.constraintlayout.widget.ConstraintLayout>

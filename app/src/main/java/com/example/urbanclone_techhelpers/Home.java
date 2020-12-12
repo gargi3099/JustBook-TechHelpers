@@ -1,6 +1,7 @@
 package com.example.application2;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -66,11 +67,30 @@ public class Home extends AppCompatActivity {
     }
 
     public void Mechanic(View view)
-    {
+    {SharedPreferences sharedPref = getSharedPreferences("category", MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putString("c", "mechanic");
+        editor.apply();
         Intent intent=new Intent(this, com.example.application2.Mechanic.class);
         startActivity(intent);
+        finish();
     }
-
+    public void Plumber(View view)
+    {SharedPreferences sharedPref = getSharedPreferences("category", MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putString("c", "plumber");
+        editor.apply();
+        Intent intent=new Intent(this, com.example.urbanclone_techhelpers.Plumber.class);
+        startActivity(intent);
+        finish();
+    }
+    public void Electrician(View view)
+    {   Intent intent2=new Intent();
+        intent2.putExtra("category","electrician");
+        Intent intent=new Intent(this, com.example.urbanclone_techhelpers.Electrician.class);
+        startActivity(intent);
+        finish();
+    }
     public void onLogOut(MenuItem item) {
         FirebaseAuth.getInstance().signOut();
         Intent intent=new Intent(this, com.example.application2.Login.class);

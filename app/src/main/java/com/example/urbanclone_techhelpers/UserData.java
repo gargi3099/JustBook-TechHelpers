@@ -1,7 +1,7 @@
 package com.example.application2;
 
 public class UserData {
-    private String name, username, address, phone;
+    private String name, username, address, phone,email;
 
     public UserData() {
     }
@@ -12,6 +12,14 @@ public class UserData {
 
     public void setName(String name) {
         this.name = name;
+    }
+	
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getUsername() {
