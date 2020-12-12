@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "244295432874",
+    "project_id": "urbanclone-techhelpers",
+    "storage_bucket": "urbanclone-techhelpers.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:244295432874:android:4379bb200a556b8c992ed3",
+        "android_client_info": {
+          "package_name": "com.example.urbanclone_techhelpers"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "244295432874-905sh95fgimq5p6np74cepj9geck1i6r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7fCSSaepaLaQbLslimLjG6rNNcFdZ9jA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "244295432874-905sh95fgimq5p6np74cepj9geck1i6r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

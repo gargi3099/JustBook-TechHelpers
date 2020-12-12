@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAF7F6"
+    tools:context="com.example.urbanclone_techhelpers.Details"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="385dp"
+        android:id="@+id/cv1"
+
+        android:background="@drawable/techde"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:id="@+id/ll1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="120dp"
+                android:layout_height="150dp"
+                android:id="@+id/imglogo"
+                android:layout_margin="10dp"
+                android:src="@drawable/tech"
+                app:civ_border_width="2dp"
+                app:civ_border_color="#FF000000"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:id="@+id/ll2"
+                >
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tname"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center"
+                    android:textSize="20sp"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:drawableLeft="@drawable/ic_baseline_account_box_24"
+                    android:drawablePadding="5dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tphn"
+                    android:textSize="20sp"
+                    android:textColor="#000000"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:drawableLeft="@android:drawable/ic_menu_call"
+                    android:drawablePadding="5dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/taddr"
+                    android:textSize="20sp"
+                    android:textColor="#000000"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:drawableLeft="@drawable/ic_baseline_home_24"
+                    android:drawablePadding="5dp"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/temail"
+                    android:textSize="20sp"
+                    android:textColor="#000000"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:drawableLeft="@android:drawable/sym_action_email"
+                    android:drawablePadding="5dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tus"
+                    android:textSize="20sp"
+                    android:textColor="#000000"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:drawableLeft="@drawable/ic_baseline_account_box_24"
+                    android:drawablePadding="5dp"
+                    />
+
+                <RatingBar
+                    android:id="@+id/rb"
+                    android:numStars="5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:isIndicator="true"
+                    android:rating="5"
+                    />
+                <Button
+                    android:id="@+id/tbtn"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="#0E0E0E"
+                    android:onClick="Confirm"
+                    android:text="Book Now"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.498"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="parent"></Button>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/tfb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="FEEDBACKS"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:background="#191919"
+        app:layout_constraintBottom_toTopOf="@+id/rv2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cv1"
+
+        android:onClick="visible"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv2"
+        android:layout_width="407dp"
+        android:layout_height="170dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        android:layout_marginTop="1dp"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@+id/tfb"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
