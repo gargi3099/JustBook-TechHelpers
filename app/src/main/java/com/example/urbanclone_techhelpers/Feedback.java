@@ -79,7 +79,9 @@ public class Feedback extends AppCompatActivity {
         boolean valid = true;
         String rt = fbr.getText().toString();
         String ct = fbc.getText().toString();
-        if (rt.isEmpty() || !rt.matches("([1-5][.])?[5]") ) {
+        int rate = Integer.parseInt(rt);
+        //!rt.matches("([1-5][.])?[5]")
+        if (rt.isEmpty() || rate>5 || rate<1) {
             fbr.setError("Please rate the service between 0 to 5");
             valid = false;
         } else {

@@ -96,4 +96,8 @@ public class Home extends AppCompatActivity {
         Intent intent=new Intent(this, com.example.application2.Login.class);
         startActivity(intent);
     }
+    public void onPreviousBooking(MenuItem item) {
+        Intent intent=new Intent(this, com.example.application2.PreviousBookings.class);
+        startActivity(intent);
+    }
 }

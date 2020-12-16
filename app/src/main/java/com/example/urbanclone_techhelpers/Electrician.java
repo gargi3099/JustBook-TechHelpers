@@ -1,11 +1,11 @@
 package com.example.urbanclone_techhelpers;
 
+import android.content.Intent;
+import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.content.Intent;
-import android.os.Bundle;
 
 import com.example.application2.R;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
@@ -41,4 +41,10 @@ public class Electrician extends AppCompatActivity {
         adapter.stopListening();
     }
 
+    public void onBackPressed()
+    {
+        super.onBackPressed();
+        Intent i= new Intent(getApplicationContext(),com.example.application2.Home.class);
+        startActivity(i);
+    }
 }

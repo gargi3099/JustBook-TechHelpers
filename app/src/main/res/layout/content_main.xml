@@ -22,10 +22,34 @@
         app:navGraph="@navigation/mobile_navigation" />
 
     <TextView
+        android:id="@+id/textView5"
+        style="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Electrician"
+        app:layout_constraintBottom_toBottomOf="@+id/nav_host_fragment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_electrician"
+        app:layout_constraintVertical_bias="0.285" />
+
+    <TextView
+        android:id="@+id/textView3"
+        style="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Plumber"
+        app:layout_constraintBottom_toTopOf="@+id/img_electrician"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_plumber" />
+
+    <TextView
+        android:id="@+id/textView6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="1dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="1dp"
         android:gravity="center"
         android:text="CHOOSE CATEGORY"
@@ -34,61 +58,61 @@
         android:textSize="24dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btnmechanic"
-        android:layout_width="313dp"
-        android:layout_height="90dp"
-        android:layout_marginTop="72dp"
-        android:background="@drawable/mybutton"
-        android:onClick="Mechanic"
-        android:text="Mechanic"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold"
-        android:textSize="25dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnplumber"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        />
-
-    <Button
-        android:id="@+id/btnplumber"
-        android:layout_width="wrap_content"
-        android:layout_height="90dp"
-        android:layout_marginTop="236dp"
-        android:text="Plumber"
-        android:onClick="Plumber"
-        android:background="@drawable/mybutton"
-        android:textSize="25dp"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/btnelectrician"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/nav_host_fragment"
-        app:layout_constraintVertical_bias="0.0"
-        />
-
-    <Button
-        android:id="@+id/btnelectrician"
-        android:layout_width="313dp"
-        android:layout_height="90dp"
-        android:layout_margin="400dp"
-        android:text="Electrician"
+    <ImageView
+        android:id="@+id/img_electrician"
+        android:layout_width="110dp"
+        android:layout_height="91dp"
         android:onClick="Electrician"
-        android:background="@drawable/mybutton"
-        android:textColor="#FFFFFF"
-        android:textSize="25dp"
-        android:textStyle="bold"
+        android:contentDescription="Electrician"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.822"
+        app:srcCompat="@drawable/electrician" />
+
+    <ImageView
+        android:id="@+id/img_mechanic"
+        android:layout_width="110dp"
+        android:layout_height="91dp"
+        android:onClick="Mechanic"
+        android:contentDescription="Mechanic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/nav_host_fragment"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/nav_host_fragment"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.177"
+        app:srcCompat="@drawable/mechanic" />
+
+    <ImageView
+        android:id="@+id/img_plumber"
+        android:layout_width="110dp"
+        android:layout_height="91dp"
+        android:onClick="Plumber"
+        android:contentDescription="Plumber"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/plumber" />
+
+    <TextView
+        style="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mechanic"
+        app:layout_constraintBottom_toTopOf="@+id/img_plumber"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_mechanic"
+        app:layout_constraintVertical_bias="0.333" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

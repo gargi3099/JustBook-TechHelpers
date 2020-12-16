@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.application2.R;
@@ -38,5 +39,12 @@ public class Plumber extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
         adapter.stopListening();
+    }
+
+    public void onBackPressed()
+    {
+        super.onBackPressed();
+        Intent i= new Intent(getApplicationContext(),com.example.application2.Home.class);
+        startActivity(i);
     }
 }

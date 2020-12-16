@@ -13,6 +13,7 @@
             android:id="@+id/nav_bookings"
             android:orderInCategory="30"
             android:icon="@drawable/ic_baseline_assignment_24"
+            android:onClick="onPreviousBooking"
             android:title="@string/menu_bookings" />
         <item
             android:id="@+id/nav_settings"

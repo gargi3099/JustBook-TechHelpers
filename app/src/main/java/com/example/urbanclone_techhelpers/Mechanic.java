@@ -1,25 +1,17 @@
 package com.example.application2;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
 
-import com.example.application2.Details;
-import com.example.application2.R;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.example.urbanclone_techhelpers.Model;
 import com.example.urbanclone_techhelpers.myadapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 public class Mechanic extends AppCompatActivity {
    RecyclerView r;
@@ -48,5 +40,12 @@ public class Mechanic extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
         adapter.stopListening();
+    }
+
+    public void onBackPressed()
+    {
+        super.onBackPressed();
+        Intent i= new Intent(getApplicationContext(),com.example.application2.Home.class);
+        startActivity(i);
     }
 }
