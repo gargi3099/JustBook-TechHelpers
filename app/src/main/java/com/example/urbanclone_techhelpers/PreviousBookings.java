@@ -1,6 +1,8 @@
 package com.example.application2;
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
+import android.os.Handler;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -21,12 +23,23 @@ public class PreviousBookings extends AppCompatActivity {
     private FirebaseDatabase FD;
     private DatabaseReference FR;
     bookadapter adapter;
+    ProgressDialog progressDialog;
+    private final static int PROGRESS=5000;
     FirebaseAuth authf = FirebaseAuth.getInstance();
     String email = authf.getCurrentUser().getEmail().toString();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_previous_bookings);
+        progressDialog = new ProgressDialog(this);
+        progressDialog.setTitle("Loading...");
+        progressDialog.show();
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                progressDialog.dismiss();
+            }
+        },PROGRESS);
         r=(RecyclerView)findViewById(R.id.rv);
         r.setLayoutManager(new LinearLayoutManager(this));
         FirebaseRecyclerOptions<Book> options =

@@ -5,7 +5,7 @@
         <item name="colorPrimary">#000000</item>
         <item name="colorPrimaryDark">#000000</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="backgroundcolor">#fcce2f</item>
+        <item name="backgroundcolor">#ffffff</item>
         <item name="textcolor">#000000</item>
         <item name="buttoncolor">#FF4500</item>
         <item name="android:windowAnimationStyle">@style/ThemeTransition</item>

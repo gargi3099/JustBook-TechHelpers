@@ -3,10 +3,12 @@ package com.example.application2;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.os.Handler;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -26,6 +28,8 @@ private String email;
 private FirebaseDatabase PD;
 private DatabaseReference PR;
 private FirebaseAuth fAuth;
+ProgressDialog progressDialog;
+private static int PROGRESS=2000;
 private static final String USERDATA="User Data";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,14 +41,24 @@ private static final String USERDATA="User Data";
         t4=(TextView)findViewById(R.id.t44);
         t5=(TextView)findViewById(R.id.t45);
         i=(CircleImageView)findViewById(R.id.imglogo);
+        progressDialog = new ProgressDialog(this);
         fAuth = FirebaseAuth.getInstance();
         email=fAuth.getCurrentUser().getEmail().toString();
         PD=FirebaseDatabase.getInstance();
         PR=PD.getReference().child(USERDATA);
+        progressDialog.setTitle("Loading...");
+        progressDialog.show();
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                progressDialog.dismiss();
+            }
+        },PROGRESS);
         PR.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for(DataSnapshot ds:snapshot.getChildren()){
+
                     if(ds.child("email").getValue().equals(email)){
                        t1.setText(ds.child("name").getValue(String.class));
                         t2.setText("PHONE: "+ds.child("phone").getValue(String.class));

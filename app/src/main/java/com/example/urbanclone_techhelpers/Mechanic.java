@@ -1,7 +1,9 @@
 package com.example.application2;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -18,10 +20,21 @@ public class Mechanic extends AppCompatActivity {
    private FirebaseDatabase FD;
    private DatabaseReference FR;
    myadapter adapter;
+    ProgressDialog progressDialog;
+    private final static int PROGRESS=5000;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mechanic);
+        progressDialog = new ProgressDialog(this);
+        progressDialog.setTitle("Loading...");
+        progressDialog.show();
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                progressDialog.dismiss();
+            }
+        },PROGRESS);
         r=(RecyclerView)findViewById(R.id.rv);
         r.setLayoutManager(new LinearLayoutManager(this));
         FirebaseRecyclerOptions<Model> options =
